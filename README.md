@@ -1,12 +1,13 @@
-# simple-web-app-with-Docker
+# API Microservice
 
-##STEPS
+1. cd to the project directory
+3. Set up .env variables using .env.example
+4. To install dependencies run `npm install ` on your terminal <br>
+4. To start the server 
+run `npm run dev` on your terminal if mongodb and nodejs are already install or using docker <br>
+run `docker build -t dockerHubUsername/apiservice .` on your terminal to build the docker image,
 
-1. Have docker on your Machine <br>
-2. clone the repo <br>
-3. CD to the Project Directory then <br>
-4. run `sudo docker build -t dockerHubUsername/simpleweb .`  to get a dockerHub username go to  [Docker Hub!](https://hub.docker.com/) <br>
-5. To start your container run `docker run -p 8080:8080 dockerHubUsername/simpleweb`
-6. Head over to your Browser and enter http://localhost:8080. <br>
+To start your container run `docker run -p 9001:9001 dockerHubUsername/apiservice` 
 
-Congratulations your simple Web Container is now runnig !!!
+
+PS. You can also use PM2 to start the service by running  `pm2 restart ecosystem.config.js` 
